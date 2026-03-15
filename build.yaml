@@ -21,3 +21,5 @@
 include:
   - board: go60_lh
   - board: go60_rh
+  - board: glove80_lh
+  - board: glove80_rh
