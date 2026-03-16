@@ -22,6 +22,10 @@
 #define MAGIC 3
 #define SYMBOLS 4
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
@@ -112,6 +116,16 @@
             bindings
                 = <&out OUT_BLE>,
                   <&bt BT_SEL 3>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <L42 R42>;
+            layers = <COLEMAK QWERTY>;
+            bindings = <&caps_word>;
         };
     };
 
