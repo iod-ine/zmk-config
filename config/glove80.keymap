@@ -120,7 +120,7 @@
             bindings = <
             &none     &none     &none     &none     &none                                                                     &none &none &none &none &none
             &none     &kp GRAVE &kp LPAR  &kp RPAR  &kp SEMI &kp COMMA                                                  &none &none &none &none &none &none
-            &kp EXCL  &kp LBKT  &kp LBRC  &kp RBRC  &kp LBKT &kp QMARK                                                  &none &none &none &none &none &none
+            &kp EXCL  &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT &kp QMARK                                                  &none &none &none &none &none &none
             &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR                                                   &none &none &none &none &none &none
             &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH  &kp BSLH  &kp DOT   &kp STAR  &none &none &none  &none &none &none &none &none &none
             &none     &kp AMPS  &kp SQT   &kp DQT   &kp PLUS           &kp PRCNT &kp COLON &kp AT    &none &none &trans       &none &none &none &none &none
