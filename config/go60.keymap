@@ -18,10 +18,11 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 // layers
-#define QWERTY 0
-#define KEYPAD 1
-#define SYMBOLS 2
-#define MAGIC 3
+#define COLEMAK 0
+#define QWERTY 1
+#define KEYPAD 2
+#define SYMBOLS 3
+#define MAGIC 4
 
 / {
     input_processors {
@@ -121,6 +122,17 @@
 
     keymap {
         compatible = "zmk,keymap";
+        colemak_layer {
+            bindings = <
+            &kp EQUAL      &kp N1 &kp N2    &kp N3  &kp N4   &kp N5                                                 &kp N6       &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
+            &kp TAB        &kp Q  &kp W     &kp F   &kp P    &kp B                                                  &kp J        &kp L    &kp U     &kp Y    &kp SEMI &kp BSLH
+            &kp ESC        &kp A  &kp R     &kp S   &kp T    &kp G                                                  &kp M        &kp N    &kp E     &kp I    &kp O    &kp SQT
+            &magic MAGIC 0 &kp Z  &kp X     &kp C   &kp D    &kp V                                                  &kp K        &kp H    &kp COMMA &kp DOT  &kp FSLH &keypad_td
+                                  &kp GRAVE &kp DEL &kp BSPC                                                                     &kp LGUI &kp LBKT  &kp RBKT
+                                                             &symbol_nav_td &kp LSHFT &kp LCTRL  &kp LALT &kp SPACE &mt RALT RET
+            >;
+        };
+
         qwerty_layer {
             bindings = <
             &kp EQUAL      &kp N1 &kp N2    &kp N3  &kp N4   &kp N5                                                 &kp N6       &kp N7   &kp N8    &kp N9   &kp N0   &kp MINUS
