@@ -193,12 +193,12 @@
 
         symbols_layer {
             bindings = <
-            &kp INS        &kp F1   &kp F2    &kp F3   &kp F4    &kp F5                                  &kp F6    &kp F7   &kp F8          &kp F9      &kp F10         &kp F11
-            &kp SLCK       &kp EXCL &kp HOME  &kp UP   &kp END   &kp PG_UP                               &kp LPAR  &kp RPAR &kp UP          &kp PRCNT   &kp K_APP       &kp F12
-            &kp CAPS       &kp AT   &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN                               &kp DLLR  &kp LEFT &kp DOWN        &kp RIGHT   &kp PAUSE_BREAK &kp PSCRN
-            &magic MAGIC 0 &kp HASH &kp LBKT  &kp RBKT &kp LBRC  &kp RBRC                                &kp AMPS  &kp STAR &kp UNDER       &kp PLUS    &kp LSHFT       &kp LCTRL
-                                    &kp CARET &trans   &trans                                                      &trans   &kp LC(LS(TAB)) &kp LC(TAB)
-                                                                 &to QWERTY &trans &trans  &trans &trans &trans
+            &none     &kp GRAVE &kp LPAR  &kp RPAR  &kp SEMI &kp COMMA                                &none &none    &none    &none &none &none
+            &kp EXCL  &kp LBKT  &kp LBRC  &kp RBRC  &kp RBKT &kp QMARK                                &none &none    &none    &none &none &none
+            &kp HASH  &kp CARET &kp EQUAL &kp UNDER &kp DLLR &kp STAR                                 &none &none    &none    &none &none &none
+            &kp TILDE &kp LT    &kp PIPE  &kp MINUS &kp GT   &kp FSLH                                 &none &kp BSLH &kp AMPS &none &none &none
+                                &kp SQT   &kp DQT   &kp PLUS                                                &none    &none    &none
+                                                              &kp PRCNT &kp COLON &kp AT  &none &none &none
             >;
         };
 
