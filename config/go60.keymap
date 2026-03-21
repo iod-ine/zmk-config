@@ -146,6 +146,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <L32 R32>;
+            layers = <COLEMAK QWERTY>;
+            bindings = <&caps_word>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         colemak_layer {
