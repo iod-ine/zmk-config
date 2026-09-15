@@ -24,6 +24,7 @@
 #define KEYPAD 1
 #define SYMBOLS 2
 #define MAGIC 3
+#define NAVIGATION 4
 
 / {
     input_processors {
@@ -160,12 +161,12 @@
 
         qwerty_layer {
             bindings = <
-            &kp EQUAL      &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                                                  &kp N6   &kp N7        &kp N8      &kp N9      &kp N0          &kp MINUS
-            &kp TAB        &kp Q        &kp W       &kp E       &kp R         &kp T                                                   &kp Y    &kp U         &kp I       &kp O       &kp P           &kp BSLH
-            &kp ESC        &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHIFT F &kp G                                                   &kp H    &hmr RSHIFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI &kp SQT
-            &magic MAGIC 0 &kp Z        &kp X       &kp C       &kp V         &kp B                                                   &kp N    &kp M         &kp COMMA   &kp DOT     &kp FSLH        &keypad_td
-                                        &kp GRAVE   &kp LEFT    &kp RIGHT                                                                      &kp CAPS      &kp LBKT    &kp RBKT
-                                                                              &kp SPACE &kp TAB &gresc  &kp DELETE &lt SYMBOLS RETURN &kp BSPC
+            &kp EQUAL      &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                                                        &kp N6   &kp N7        &kp N8      &kp N9      &kp N0          &kp MINUS
+            &kp TAB        &kp Q        &kp W       &kp E       &kp R         &kp T                                                         &kp Y    &kp U         &kp I       &kp O       &kp P           &kp BSLH
+            &kp ESC        &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHIFT F &kp G                                                         &kp H    &hmr RSHIFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI &kp SQT
+            &magic MAGIC 0 &kp Z        &kp X       &kp C       &kp V         &kp B                                                         &kp N    &kp M         &kp COMMA   &kp DOT     &kp FSLH        &keypad_td
+                                        &kp GRAVE   &kp LEFT    &kp RIGHT                                                                            &kp CAPS      &kp LBKT    &kp RBKT
+                                                                              &kp SPACE &kp TAB &lt NAVIGATION &gresc  &kp DELETE &lt SYMBOLS RETURN &kp BSPC
             >;
         };
 
@@ -199,6 +200,17 @@
             &none       &none           &bt_0           &bt_1           &bt_2           &bt_3                             &none      &kp C_PREV   &kp C_PP   &kp C_NEXT   &none &none
                                         &out OUT_USB    &none           &none                                                        &none        &none      &none
                                                                                         &none &none &kp CAPS  &none &none &none
+            >;
+        };
+
+        navigation_layer {
+            bindings = <
+            &none &none &none &none &none &none                                      &none    &none    &none  &none     &none &none
+            &none &none &none &none &none &none                                      &none    &none    &none  &none     &none &none
+            &none &none &none &none &none &none                                      &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+            &none &none &none &none &none &none                                      &none    &none    &none  &none     &none &none
+                        &none &none &none                                                     &none    &none  &none
+                                                &none &none &none  &none &none &none
             >;
         };
     };
