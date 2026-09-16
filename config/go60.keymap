@@ -95,7 +95,6 @@
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
-
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -107,6 +106,16 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
+
+        ltg: lt_gresc {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&gresc>;
+        };
+
     };
 
     macros {
@@ -161,12 +170,12 @@
 
         qwerty_layer {
             bindings = <
-            &kp EQUAL      &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                                                  &kp N6   &kp N7        &kp N8      &kp N9      &kp N0          &kp MINUS
-            &kp TAB        &kp Q        &kp W       &kp E       &kp R         &kp T                                                   &kp Y    &kp U         &kp I       &kp O       &kp P           &kp BSLH
-            &lt NAV ESC    &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHIFT F &kp G                                                   &kp H    &hmr RSHIFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI &kp SQT
-            &magic MAGIC 0 &kp Z        &kp X       &kp C       &kp V         &kp B                                                   &kp N    &kp M         &kp COMMA   &kp DOT     &kp FSLH        &keypad_td
-                                        &kp GRAVE   &kp LEFT    &kp RIGHT                                                                      &kp CAPS      &kp LBKT    &kp RBKT
-                                                                              &kp SPACE &kp TAB &gresc  &kp DELETE &lt SYMBOLS RETURN &kp BSPC
+            &kp EQUAL      &kp N1       &kp N2      &kp N3      &kp N4        &kp N5                                                    &kp N6   &kp N7        &kp N8      &kp N9      &kp N0          &kp MINUS
+            &kp TAB        &kp Q        &kp W       &kp E       &kp R         &kp T                                                     &kp Y    &kp U         &kp I       &kp O       &kp P           &kp BSLH
+            &kp ESC        &hml LCTRL A &hml LALT S &hml LGUI D &hml LSHIFT F &kp G                                                     &kp H    &hmr RSHIFT J &hmr RGUI K &hmr RALT L &hmr RCTRL SEMI &kp SQT
+            &magic MAGIC 0 &kp Z        &kp X       &kp C       &kp V         &kp B                                                     &kp N    &kp M         &kp COMMA   &kp DOT     &kp FSLH        &keypad_td
+                                        &kp GRAVE   &kp LEFT    &kp RIGHT                                                                        &kp CAPS      &kp LBKT    &kp RBKT
+                                                                              &kp SPACE &kp TAB &ltg NAV  &kp DELETE &lt SYMBOLS RETURN &kp BSPC
             >;
         };
 
